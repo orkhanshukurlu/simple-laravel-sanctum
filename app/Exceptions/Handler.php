@@ -50,7 +50,7 @@ class Handler extends ExceptionHandler
         {
             if ($request->is('api/*'))
             {
-                return $this->responseMessage('Error', $e->errors());
+                return $this->responseMessage('Error', $e->errors(), 422);
             }
         });
 
